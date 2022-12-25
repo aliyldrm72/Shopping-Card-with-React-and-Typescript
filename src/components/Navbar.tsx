@@ -19,7 +19,7 @@ export function Navbar() {
         </Nav>
         <Button
           style={{ width: "4rem", height: "4rem", position: "relative" }}
-          variant="outline-primary"
+          variant="outline-success"
           className="rounded-circle"
         >
           <img
@@ -31,6 +31,7 @@ export function Navbar() {
               position: "absolute",
               bottom: "15px",
               right: "8px",
+              
             }}
           />
 
