@@ -1,8 +1,12 @@
 import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/image/svg/logo.svg";
+import { useShoppingCart } from "../context/shoppingCartContext";
 
 export function Navbar() {
+
+ const {openCart,closeCart,cartQuantity} = useShoppingCart()
+
   return (
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
       <Container>
@@ -17,7 +21,9 @@ export function Navbar() {
             About
           </Nav.Link>
         </Nav>
+        {cartQuantity >0 &&(  // This code will led to hide order list invisible
         <Button
+        onClick={openCart}
           style={{ width: "4rem", height: "4rem", position: "relative" }}
           variant="outline-success"
           className="rounded-circle"
@@ -47,10 +53,10 @@ export function Navbar() {
               transform:"translate(25%,25%) ",
             }}
           >
-            3
+            {cartQuantity}
           </div>
-        </Button>
+        </Button>)}
       </Container>
     </NavbarBs>
-  ); //İMPORT HERE nAVBAR AS NAVBAR AS TO AVOİD BUG
+  ); //İMPORT HERE NVBAR AS NAVBAR AS TO AVOİD BUG
 }
