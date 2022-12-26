@@ -21,4 +21,4 @@ To use the ShoppingCartProvider component, wrap it around the components in your
   
   # GIF
   
-![](https://github.com/Your_Repository_Name/Your_GIF_Name.gif)
+![](https://github.com/aliyldrm72/Shopping-Card-with-React-and-Typescript/blob/main/public/shopping.gif)
